@@ -27,7 +27,20 @@
             width: 90%;
             text-align: center;
         }
-
+        /* --- 【新規追加】ロゴエリアのスタイル --- */
+        .logo-container {
+            margin-bottom: 30px; /* ロゴの下の余白 */
+        }
+        
+        /* 【方法A】ロゴ画像ファイルを使用する場合 */
+        .logo-image {
+            max-width: 200px; /* ロゴの最大幅 */
+            height: auto;     /* 高さは自動調整 */
+            display: block;
+            margin: 0 auto;   /* 中央配置 */
+        }
+        /* -------------------------------------- */
+        
         .notice-box {
             background-color: #fefce8;
             border: 1px solid #fef08a;
@@ -92,14 +105,14 @@
             window.location.replace(targetUrl);
         }
 
-        // // 【2】遷移時の状態保存処理
-        // // ボタンがクリックされた時に実行される関数です。
-        // function savePreferenceAndRedirect() {
-        //     const checkbox = document.getElementById("skipCheckbox");
-        //     // チェックボックスにチェックが入っていれば、localStorageに記録します
-        //     if (checkbox && checkbox.checked) {
-        //         localStorage.setItem("skipClickSearchRedirect", "true");
-        //     }
+        // 【2】遷移時の状態保存処理
+        // ボタンがクリックされた時に実行される関数です。
+        function savePreferenceAndRedirect() {
+            const checkbox = document.getElementById("skipCheckbox");
+            // チェックボックスにチェックが入っていれば、localStorageに記録します
+            if (checkbox && checkbox.checked) {
+                localStorage.setItem("skipClickSearchRedirect", "true");
+            }
         }
     </script>
 
@@ -124,10 +137,14 @@
             </label>
 
             <a href="https://knowledgesuite.zendesk.com/hc/article_attachments/35957151195545"
-                class="help-link">マニュアルはこちら</a>
+                class="help-link">クリックサーチマニュアルはこちら</a>
+            
+            <a href="https://www.bluetec.co.jp/bsuite/service/clicksearch/"
+                class="help-link">クリックサーチとは</a>
         </div>
     </div>
 
 </body>
 
 </html>
+
